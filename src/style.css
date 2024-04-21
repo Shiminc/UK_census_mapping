@@ -1,0 +1,14 @@
+h1,h4,p {
+    position: relative;
+    width: 85.0%;
+    left: 7.5%;
+}
+
+#map_97338d3ad9e1ad779e5ce40438d5fa2a {
+    position: relative;
+    width: 85.0%;
+    height: 100.0%;
+    left: 7.5%;
+    top: 0.0%;
+}
+.leaflet-container { font-size: 1rem; }

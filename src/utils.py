@@ -36,8 +36,10 @@ def create_basemap(data: pd.DataFrame, latitude: str, longitude: str):
     Returns:
         folium.Map: a basemap with the boundary, center and zooming set.
     """    
-    lat_mean = data[latitude].mean()
+    lat_mean = data[latitude].mean() 
     long_mean = data[longitude].mean()
+
+
     lat_min = data[latitude].min()
     lat_max = data[latitude].max()
     long_min = data[longitude].min()
@@ -45,15 +47,15 @@ def create_basemap(data: pd.DataFrame, latitude: str, longitude: str):
 
     m = folium.Map(
         location=[lat_mean, long_mean],
-        zoom_start=5,
-        min_zoom= 5,
+        zoom_start=6,
+        min_zoom= 6,
         max_zoom= 18,
         control_scale=True,
         max_bounds=True,
-        min_lat=lat_min - 10,
+        min_lat=lat_min - 12,
         max_lat=lat_max + 10,
-        min_lon=long_min - 10,
-        max_lon=long_max + 10
+        min_lon=long_min - 1,
+        max_lon=long_max + 1
     )
 
     m.fit_bounds([[lat_min, long_min], [lat_max, long_max]])
